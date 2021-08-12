@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    android:clickable="true"
+    android:id="@+id/llMainView">
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x15"
+        android:layout_marginEnd="@dimen/x15"
+        android:layout_marginBottom="@dimen/x10"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_by_keyword"
+            android:paddingTop="@dimen/x7"
+            android:paddingBottom="@dimen/x7"
+            style="?attr/primaryEdiTextTheme"
+            android:imeOptions="actionSearch"
+            android:inputType="text"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="?attr/secondaryTextColor"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <!-- Product Section -->
+    <FrameLayout
+        android:id="@+id/flProductContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/x15"
+        android:layout_marginEnd="@dimen/x15"
+        android:layout_marginBottom="@dimen/x10"
+        android:visibility="visible">
+
+
+        <!-- NearBy Doctor Listing  -->
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvSearchProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <!-- No data Found  Section -->
+        <LinearLayout
+            android:id="@+id/llNoProductDataFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/x5"
+            android:layout_marginEnd="@dimen/x5"
+            android:layout_gravity="center"
+            android:padding="@dimen/x5"
+            android:visibility="gone">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/lato_black"
+                android:textSize="@dimen/s12"
+                android:text="@string/no_products_found"
+                android:layout_marginEnd="@dimen/x5"/>
+
+
+        </LinearLayout>
+        <!-- No data Found Section -->
+
+
+    </FrameLayout>
+    <!-- Doctor Section -->
+
+
+</LinearLayout>
+
+

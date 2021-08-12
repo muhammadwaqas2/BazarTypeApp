@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.yovenny.VideoCompress:videocompress:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/videocompress-1.0.0.aar/1b557bbe276a5c9cdf7f3df7aa3de784/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/videocompress-1.0.0.aar/1b557bbe276a5c9cdf7f3df7aa3de784/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/videocompress-1.0.0.aar/1b557bbe276a5c9cdf7f3df7aa3de784/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/videocompress-1.0.0.aar/1b557bbe276a5c9cdf7f3df7aa3de784/jars/libs/isoparser-1.0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yovenny.VideoCompress/videocompress/1.0.0/a26af4de4b42464b567f51fc4a3ef9f63c8ed489/videocompress-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

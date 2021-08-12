@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/x10"
+    android:layout_marginBottom="@dimen/x10"
+    android:layout_marginStart="@dimen/x10"
+    android:layout_marginEnd="@dimen/x20">
+
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="@dimen/x95"
+        android:layout_height="@dimen/x95"
+        android:layout_gravity="center"
+        android:src="@drawable/image_placeholder"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="@dimen/x5"
+        android:layout_marginEnd="@dimen/x5"/>
+
+    <ImageView
+        android:id="@+id/ivRemoveIcon"
+        android:layout_width="@dimen/x20"
+        android:layout_height="@dimen/x20"
+        android:background="@drawable/red_circle"
+        android:padding="@dimen/x2"
+        android:src="@drawable/ic_cancel"
+        android:layout_gravity="end"/>
+</FrameLayout>

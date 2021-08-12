@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    android:fillViewport="true"
+    android:clickable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llMainView">
+
+
+        <!-- Category Image View -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:background="@color/black">
+
+            <ImageView
+                android:id="@+id/ivCatImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x180"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:src="@drawable/image_placeholder"/>
+
+
+            <ImageView
+                android:id="@+id/ivEditIcon"
+                android:layout_width="@dimen/x35"
+                android:layout_height="@dimen/x35"
+                android:adjustViewBounds="true"
+                android:layout_gravity="end|bottom"
+                android:layout_marginTop="@dimen/x110"
+                android:layout_marginBottom="@dimen/x10"
+                android:layout_margin="@dimen/x5"
+                android:background="@drawable/primary_color_circle"
+                android:padding="@dimen/x5"
+                android:src="@drawable/ic_edit"/>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/x10"
+                android:indeterminate="true"
+                android:layout_gravity="center"
+                android:indeterminateTint="?attr/colorPrimary"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+        <!-- Category Image View -->
+
+        <!-- Title View -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x15"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_marginEnd="@dimen/x15"
+            android:layout_marginBottom="@dimen/x10"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/category_name"
+                android:paddingTop="@dimen/x7"
+                android:paddingBottom="@dimen/x7"
+                style="?attr/primaryEdiTextTheme"
+                android:maxLength="100"
+                android:inputType="text"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="?attr/secondaryTextColor"/>
+
+        </android.support.design.widget.TextInputLayout>
+        <!-- Title View -->
+
+        <!-- Desc View -->
+            <EditText
+                android:id="@+id/etDesc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x150"
+                android:hint="@string/description"
+                android:layout_marginStart="@dimen/x15"
+                android:layout_marginEnd="@dimen/x15"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginBottom="@dimen/x10"
+                android:padding="@dimen/x7"
+                style="?attr/primaryEdiTextTheme"
+                android:singleLine="false"
+                android:maxLength="1000"
+                android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+                android:background="@drawable/editetxt_border_drawable"
+                android:gravity="start"
+                android:textColorHint="?attr/secondaryTextColor"/>
+
+        <!-- Desc View -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_marginEnd="@dimen/x15"
+            android:layout_marginTop="@dimen/x15"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCatSelected"
+                android:text="@string/select_cat"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="?attr/primaryButtonTheme"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/ivRemoveSelectedParentCat"
+                android:layout_width="@dimen/x50"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_button_red_color"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5"
+                android:paddingStart="@dimen/x12"
+                android:paddingEnd="@dimen/x12"
+                android:layout_marginStart="@dimen/x10"
+                android:src="@drawable/ic_cancel"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnCatDelete"
+            android:text="@string/delete_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?attr/primaryButtonTheme"
+            android:background="@drawable/rounded_button_red_color"
+            android:layout_margin="@dimen/x15"
+            android:paddingTop="@dimen/x5"
+            android:paddingBottom="@dimen/x5"
+            android:visibility="visible"/>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

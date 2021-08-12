@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.romandanylyk:pageindicatorview:1.0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pageindicatorview-1.0.2.aar/a205443553a3b0917c3c8f360807b2cf/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pageindicatorview-1.0.2.aar/a205443553a3b0917c3c8f360807b2cf/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pageindicatorview-1.0.2.aar/a205443553a3b0917c3c8f360807b2cf/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.romandanylyk/pageindicatorview/1.0.2/9370b72bea8fd21e5ce4bc8650ece463b11464c/pageindicatorview-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

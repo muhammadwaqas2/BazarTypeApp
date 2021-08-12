@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@color/light_gray"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvCompanyPackagePayText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_regular"
+            android:paddingStart="@dimen/x5"
+            android:paddingTop="@dimen/x15"
+            android:paddingEnd="@dimen/x5"
+            android:paddingBottom="@dimen/x15"
+            android:text="Claim Free 50 orfers Credit"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="@dimen/s13" />
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:layout_marginEnd="@dimen/x5"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_right_arrow" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

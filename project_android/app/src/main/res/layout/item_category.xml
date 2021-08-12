@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMainView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x130"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:elevation="@dimen/x3"
+    android:background="@drawable/shadow_small">
+
+
+  <com.makeramen.roundedimageview.RoundedImageView
+      android:id="@+id/ivCatImg"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:adjustViewBounds="true"
+      android:layout_gravity="center"
+      android:src="@drawable/image_placeholder"
+      android:scaleType="fitXY"
+      app:riv_corner_radius="@dimen/x7"/>
+
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/round_black_transparent"/>
+
+
+
+  <ImageView
+      android:id="@+id/ivEditCat"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_width="@dimen/x25"
+      android:layout_height="@dimen/x25"
+      android:layout_margin="@dimen/x5"
+      android:background="@drawable/primary_color_circle"
+      android:padding="@dimen/x5"
+      android:src="@drawable/ic_edit"/>
+
+  <TextView
+      android:id="@+id/tvCatName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/white"
+      android:fontFamily="@font/lato_bold"
+      android:textSize="@dimen/s14"
+      android:maxLines="2"
+      android:ellipsize="end"
+      android:layout_centerInParent="true"
+      android:shadowColor="@color/black"
+      android:shadowDx="5"
+      android:shadowDy="5"
+      android:shadowRadius="5"
+      android:elevation="@dimen/x5"/>
+
+</RelativeLayout>

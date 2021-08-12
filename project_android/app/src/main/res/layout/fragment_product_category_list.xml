@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:clickable="true">
+
+
+    <TextView
+        android:id="@+id/tvNoDataFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/x5"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:text="@string/no_cat_prod_data_found"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="@dimen/s12"
+        android:visibility="gone" />
+
+
+    <!-- Lists Section -->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshCatAndProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Category Section -->
+                <LinearLayout
+                    android:id="@+id/llCategoryContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x15"
+                    android:layout_marginTop="@dimen/x15"
+                    android:layout_marginEnd="@dimen/x15"
+                    android:paddingBottom="@dimen/x15"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <!-- Heading -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x5"
+                        android:layout_marginTop="@dimen/x10"
+                        android:layout_marginBottom="@dimen/x10"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="@string/categories"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="@dimen/s14" />
+                    <!-- Heading -->
+
+                    <!-- Category List Section -->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/x10"
+                        android:layout_marginBottom="@dimen/x10" />
+
+                    <!-- Category Section  -->
+
+                </LinearLayout>
+
+                <!-- Product Section -->
+                <LinearLayout
+                    android:id="@+id/llProductContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x15"
+                    android:layout_marginEnd="@dimen/x15"
+                    android:paddingBottom="@dimen/x15"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <!-- Heading -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x5"
+                        android:layout_marginTop="@dimen/x10"
+                        android:layout_marginBottom="@dimen/x10"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="@string/products"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="@dimen/s14" />
+                    <!-- Heading -->
+
+                    <!-- Product List Section -->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x10" />
+
+                    <!-- Product Section  -->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <!-- Lists Section -->
+
+    <!--Black Overlay -->
+    <FrameLayout
+        android:id="@+id/flOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <!--Floating Button Section -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/x15"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginEnd="@dimen/x15"
+        android:layout_marginBottom="@dimen/x15"
+        android:gravity="center|end"
+        android:orientation="vertical">
+
+
+        <!--Add Product-->
+        <LinearLayout
+            android:id="@+id/llAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x5"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/add_product"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s12" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x5"
+                android:elevation="@dimen/x0"
+                android:src="@drawable/ic_add"
+                app:backgroundTint="?attr/colorPrimaryDark"
+                app:elevation="@dimen/x0"
+                app:fabCustomSize="@dimen/x45" />
+        </LinearLayout>
+        <!--Add Product-->
+
+
+        <!--Add Category-->
+        <LinearLayout
+            android:id="@+id/llAddCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x5"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/add_category"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s12" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x5"
+                android:elevation="@dimen/x0"
+                android:src="@drawable/ic_add"
+                app:backgroundTint="?attr/colorPrimaryDark"
+                app:elevation="@dimen/x0"
+                app:fabCustomSize="@dimen/x45" />
+        </LinearLayout>
+        <!--Add Category-->
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/x0"
+            android:src="@drawable/ic_add"
+            app:backgroundTint="?attr/colorPrimaryDark"
+            app:elevation="@dimen/x0"
+            app:fabCustomSize="@dimen/x55" />
+
+    </LinearLayout>
+    <!--Floating Button Section -->
+
+</RelativeLayout>

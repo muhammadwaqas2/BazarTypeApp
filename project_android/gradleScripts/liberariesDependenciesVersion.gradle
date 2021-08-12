@@ -1,0 +1,28 @@
+ext{
+    junitVersion = '4.12'
+    runnerVersion = '1.0.1'
+    espressoVersion = '3.0.1'
+    rippleEffectButttonLibVersion = '1.3'
+    butterKnifeLibVersion = '8.8.1'
+    saripaarValidationLibVersion = '2.0.3'
+    progressBarLibVersion = '1.1.0'
+    toastyLibVersion = '1.2.8'
+
+    filePickerLibVersion = '2.1.0'//2.1.0 previous
+    glideLibVersion = '4.2.0'
+    imageCompressionLibVersion = '2.1.0'
+    permissionTEDLibVersion = '2.1.0'
+
+    playServicesMapLibVersion = '16.0.0'
+    playServicesLibVersion = '16.0.0'
+
+    archLifecycleVersion = '1.1.1'
+
+
+    //Animation Dependencies Array
+    animationLibDependencies = [
+            easingAnimationLiberary : 'com.daimajia.easing:library:2.0@aar',
+            androidAnimationLiberary : 'com.daimajia.androidanimations:library:2.3@aar',
+    ]
+
+}

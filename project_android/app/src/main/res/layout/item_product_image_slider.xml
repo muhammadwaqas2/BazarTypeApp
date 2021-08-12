@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/llMainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Product Image View -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x180"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/image_placeholder"/>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x10"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="?attr/colorPrimary"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <!-- Product Image View -->
+
+</LinearLayout>

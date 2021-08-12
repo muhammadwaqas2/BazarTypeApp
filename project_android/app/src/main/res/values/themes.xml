@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <style name="AppPrimaryTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+
+        <!-- Status Bar Text and Background Color -->
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Status Bar Text and Background Color -->
+
+        <item name="colorPrimary">@color/appColorPrimary</item>
+        <item name="colorPrimaryDark">@color/appColorPrimaryDark</item>
+        <item name="colorAccent">@color/appColorAccent</item>
+        <item name="primaryTextColor">@color/appPrimaryTextColor</item>
+        <item name="secondaryTextColor">@color/appSecondaryTextColor</item>
+        <item name="buttonNormalColor">@color/appButtonNormalColor</item>
+        <item name="buttonHighlightColor">@color/appButtonHighlightColor</item>
+        <item name="buttonTextColor">@color/appButtonTextColor</item>
+        <item name="primaryButtonTheme">@style/Button.Primary.Round</item>
+        <item name="secondaryButtonTheme">@style/Gray.Button.Primary.Round</item>
+        <item name="lightGrayButtonTheme">@style/Light.Gray.Primary.Round</item>
+        <item name="colorScreenBg">@color/appScreenBgColor</item>
+        <item name="primaryEdiTextTheme">@style/EdiText.Primary.HintTextStyle</item>
+        <item name="primaryDarkButtonTheme">@style/Blue.Button.Primary.Dark.Round</item>
+
+        <!-- ALl TextInput Line Bottom Color -->
+        <item name="colorControlNormal">@color/appSecondaryTextColor</item>
+        <item name="colorControlActivated">@color/appSecondaryTextColor</item>
+        <item name="colorControlHighlight">@color/appSecondaryTextColor</item>
+        <!-- ALl TextInput Line Bottom Color -->
+    </style>
+
+    <style name="AppImagePickerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/appColorPrimary</item>
+        <item name="colorPrimaryDark">@color/appColorPrimaryDark</item>
+        <item name="colorAccent">@color/appColorAccent</item>
+
+        <item name="colorControlNormal">@color/appColorPrimary</item>
+        <item name="colorControlActivated">@color/appColorPrimary</item>
+        <item name="colorControlHighlight">@color/appColorPrimary</item>
+    </style>
+
+</resources>

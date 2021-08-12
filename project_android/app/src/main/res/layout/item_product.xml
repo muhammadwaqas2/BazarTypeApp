@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/x5"
+    android:layout_marginTop="@dimen/x10"
+    android:layout_marginEnd="@dimen/x5"
+    android:layout_marginBottom="@dimen/x10"
+    android:background="@drawable/dialog_round_bg"
+    android:elevation="@dimen/x3"
+    android:orientation="vertical">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivProductImg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x140"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/image_placeholder"
+        app:riv_corner_radius_top_left="@dimen/x5"
+        app:riv_corner_radius_top_right="@dimen/x5" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/x7">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato_bold"
+            android:maxLines="3"
+            android:text="N/A"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="@dimen/s14" />
+
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5"
+            android:fontFamily="@font/lato_bold"
+            android:text="Rs. 0.00/="
+            android:textColor="?attr/secondaryTextColor"
+            android:textSize="@dimen/s12" />
+
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_marginEnd="@dimen/x15">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvTitle"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="?attr/primaryTextColor"-->
+    <!--android:fontFamily="@font/lato_bold"-->
+    <!--android:textSize="@dimen/s14"-->
+    <!--android:ellipsize="end"/>-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvDesc"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="?attr/secondaryTextColor"-->
+    <!--android:fontFamily="@font/lato_bold"-->
+    <!--android:layout_marginTop="@dimen/x5"-->
+    <!--android:textSize="@dimen/s12"-->
+    <!--android:visibility="gone"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivCheckbox"-->
+    <!--android:layout_width="@dimen/x25"-->
+    <!--android:layout_height="@dimen/x25"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:src="@drawable/check_sign"/>-->
+
+</LinearLayout>

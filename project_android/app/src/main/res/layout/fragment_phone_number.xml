@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    android:gravity="center"
+    android:paddingStart="@dimen/x15"
+    android:paddingEnd="@dimen/x15"
+    android:clickable="true">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorScreenBg"
+        android:gravity="center"
+        android:id="@+id/llMainView">
+
+
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/x210"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logo_detail"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="@dimen/x90"
+            android:visibility="gone"/>
+
+
+        <LinearLayout
+            android:id="@+id/llPhoneNumberSection"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginBottom="@dimen/x90"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/primaryTextColor"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/s10"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/country_code"/>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/x7"
+                    android:paddingBottom="@dimen/x7"
+                    android:id="@+id/flDialCodeContainer">
+
+                    <TextView
+                        android:id="@+id/tvCountryCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+92"
+                        android:fontFamily="@font/lato_bold"
+                        style="?attr/primaryEdiTextTheme"/>
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/x12"-->
+                        <!--android:layout_height="@dimen/x12"-->
+                        <!--android:src="@drawable/back"-->
+                        <!--android:rotation="270"-->
+                        <!--android:layout_gravity="center|end"/>-->
+
+                </FrameLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="?attr/secondaryTextColor"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.75"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/primaryTextColor"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="@string/phone_number"
+                    android:textSize="@dimen/s10"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/x7"
+                    android:paddingBottom="@dimen/x7"
+                    android:fontFamily="@font/lato_bold"
+                    android:hint="3XX XXXX XXX"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    style="?attr/primaryEdiTextTheme"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="?attr/secondaryTextColor"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnNext"
+            android:text="@string/next_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?attr/primaryButtonTheme"
+            android:paddingTop="@dimen/x5"
+            android:paddingBottom="@dimen/x5"
+            android:layout_marginTop="@dimen/x15"
+            android:layout_marginBottom="@dimen/x15"
+            android:layout_marginStart="@dimen/x90"
+            android:layout_marginEnd="@dimen/x90"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</FrameLayout>
+
+

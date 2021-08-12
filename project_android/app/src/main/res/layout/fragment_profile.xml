@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    android:fillViewport="true"
+    android:clickable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/x10"
+        android:paddingEnd="@dimen/x10"
+        android:id="@+id/llMainView">
+
+
+        <!-- Profile Image View -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="@dimen/x110"
+                android:layout_height="@dimen/x110"
+                android:layout_gravity="center"
+                android:src="@drawable/image_placeholder"
+                app:civ_border_color="@color/transparent"
+                app:civ_border_width="@dimen/x2"/>
+
+
+            <ImageView
+                android:id="@+id/ivCameraIcon"
+                android:layout_width="@dimen/x35"
+                android:layout_height="@dimen/x35"
+                android:adjustViewBounds="true"
+                android:background="@drawable/white_circle"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/x110"
+                android:layout_marginBottom="@dimen/x10"
+                android:src="@drawable/ic_svg_camera"
+                android:padding="@dimen/x10"
+                android:elevation="@dimen/x5"/>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/x10"
+                android:indeterminate="true"
+                android:indeterminateTint="?attr/colorPrimary"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+        <!-- Profile Image View -->
+
+        <!-- Name View -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_marginEnd="@dimen/x15"
+            android:layout_marginBottom="@dimen/x10"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_company_name"
+                android:paddingTop="@dimen/x7"
+                android:paddingBottom="@dimen/x7"
+                style="?attr/primaryEdiTextTheme"
+                android:maxLength="100"
+                android:inputType="text"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="?attr/secondaryTextColor"/>
+
+        </android.support.design.widget.TextInputLayout>
+        <!-- Name View -->
+
+        <!-- Business Category Selection View -->
+        <LinearLayout
+            android:id="@+id/llBusinessCategoryContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_marginEnd="@dimen/x15"
+            android:layout_marginBottom="@dimen/x10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/flBusinessCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/x7"
+                android:paddingBottom="@dimen/x7">
+
+                <TextView
+                    android:id="@+id/tvBusinessCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/select_your_buiness_category"
+                    style="?attr/primaryEdiTextTheme"/>
+
+                <ImageView
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/x15"
+                    android:src="@drawable/ic_right_arrow"
+                    android:rotation="90"
+                    android:layout_gravity="center|end"
+                    android:visibility="visible"/>
+
+            </FrameLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="?attr/secondaryTextColor"/>
+
+        </LinearLayout>
+        <!-- Business Category Selection View -->
+
+
+
+        <!-- Tabs Option Section -->
+        <LinearLayout
+            android:id="@+id/llTabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/x15"
+            android:layout_marginBottom="@dimen/x10"
+            style="?attr/primaryButtonTheme"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tvAddressTab"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="?attr/buttonTextColor"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:textSize="@dimen/s12"
+                android:text="@string/address"
+                android:background="@drawable/primary_dark_top_bottom_left_corner_button_bg_drawable"/>
+
+
+
+            <TextView
+                android:id="@+id/tvOnMapTab"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textColor="?attr/buttonTextColor"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:textSize="@dimen/s12"
+                android:text="@string/on_map"/>
+
+
+
+
+        </LinearLayout>
+        <!-- Tabs Option Section -->
+
+        <!-- Address Tabs Section -->
+
+        <LinearLayout
+            android:id="@+id/llAddressTabSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_marginEnd="@dimen/x15"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Office / Shop No -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilShopNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/etShopNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/shop_no_office_no"
+                    android:paddingTop="@dimen/x7"
+                    android:paddingBottom="@dimen/x7"
+                    style="?attr/primaryEdiTextTheme"
+                    android:inputType="text"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="?attr/secondaryTextColor"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <!-- Office / Shop No -->
+
+            <!-- Market Name -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilMarketName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/etMarketName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/market_name"
+                    android:paddingTop="@dimen/x7"
+                    android:paddingBottom="@dimen/x7"
+                    style="?attr/primaryEdiTextTheme"
+                    android:inputType="text"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="?attr/secondaryTextColor"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <!-- Market Name -->
+
+
+            <!-- Street Address -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilStreetAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/etStreetAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/street_address"
+                    android:paddingTop="@dimen/x7"
+                    android:paddingBottom="@dimen/x7"
+                    style="?attr/primaryEdiTextTheme"
+                    android:inputType="text"
+                    android:maxLength="250"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="?attr/secondaryTextColor"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <!-- Street Address -->
+
+
+
+            <!-- City  -->
+            <LinearLayout
+                android:id="@+id/llCityContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:id="@+id/flCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/x7"
+                    android:paddingBottom="@dimen/x7">
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="?attr/primaryEdiTextTheme"
+                        android:hint="@string/select_your_city"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:src="@drawable/ic_right_arrow"
+                        android:rotation="90"
+                        android:layout_gravity="center|end"
+                        android:visibility="visible"/>
+
+                </FrameLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="?attr/secondaryTextColor"/>
+
+            </LinearLayout>
+            <!-- City  -->
+
+
+            <Button
+                android:id="@+id/btnSaveAddress"
+                android:text="@string/save_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?attr/primaryButtonTheme"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5"
+                android:layout_marginTop="@dimen/x25"
+                android:layout_marginBottom="@dimen/x25"
+                android:layout_marginStart="@dimen/x90"
+                android:layout_marginEnd="@dimen/x90"
+                android:visibility="visible"/>
+
+
+        </LinearLayout>
+        <!-- Address Tabs Section -->
+
+
+        <!-- Map Tabs Section -->
+
+        <LinearLayout
+            android:id="@+id/llMapTabSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_marginEnd="@dimen/x15"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/llMapView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x300">
+
+                <!--<com.google.android.gms.maps.MapView-->
+                    <!--android:id="@+id/mapView"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent" />-->
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/mapView"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnSaveMapAddress"
+                android:text="@string/save_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?attr/primaryButtonTheme"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5"
+                android:layout_marginTop="@dimen/x25"
+                android:layout_marginBottom="@dimen/x25"
+                android:layout_marginStart="@dimen/x90"
+                android:layout_marginEnd="@dimen/x90"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+        <!-- Map Tabs Section -->
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    android:clickable="true"
+    android:orientation="vertical">
+
+
+    <!-- Tabs Option Section -->
+    <LinearLayout
+        android:id="@+id/llTabs"
+        style="?attr/primaryButtonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x52"
+        android:background="?attr/colorPrimary"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <!-- Received Tab -->
+        <TextView
+            android:id="@+id/tvReceived"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimaryDark"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="@string/received"
+            android:textColor="?attr/buttonTextColor"
+            android:textSize="@dimen/s12" />
+
+        <!-- Placed Tab -->
+        <TextView
+            android:id="@+id/tvPlaced"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="@string/placed"
+            android:textColor="?attr/buttonTextColor"
+            android:textSize="@dimen/s12" />
+
+        <!-- Drafts Tab -->
+        <TextView
+            android:id="@+id/tvDrafts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="@string/drafts"
+            android:textColor="?attr/buttonTextColor"
+            android:textSize="@dimen/s12" />
+
+
+    </LinearLayout>
+    <!-- Tabs Option Section -->
+
+
+    <!-- Main Section -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+                <!-- Section -->
+                <FrameLayout
+                    android:id="@+id/flSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- List Section -->
+                    <LinearLayout
+                        android:id="@+id/llSectionContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Pending Section -->
+                        <LinearLayout
+                            android:id="@+id/llPendingSectionContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+
+                            <!-- Pending Heading Text -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_gray"
+                                android:padding="@dimen/x10">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lato_bold"
+                                    android:gravity="start"
+                                    android:text="@string/pending"
+                                    android:textColor="?attr/secondaryTextColor"
+                                    android:textSize="@dimen/s14" />
+
+                            </LinearLayout>
+                            <!-- Pending Heading Text -->
+
+                            <!-- Pending List   -->
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rvPending"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/x10" />
+                            <!-- Pending List   -->
+
+
+                        </LinearLayout>
+                        <!-- Pending Section -->
+
+                        <!-- Processed Section -->
+                        <LinearLayout
+                            android:id="@+id/llProcessedSectionContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+
+                            <!-- Processed Heading Text -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/light_gray"
+                                android:padding="@dimen/x10">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lato_bold"
+                                    android:gravity="start"
+                                    android:text="@string/processed"
+                                    android:textColor="?attr/secondaryTextColor"
+                                    android:textSize="@dimen/s14" />
+
+                            </LinearLayout>
+                            <!-- Processed Heading Text -->
+
+                            <!-- Processed List   -->
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rvProcessed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/x10" />
+                            <!-- Processed List   -->
+
+                        </LinearLayout>
+                        <!-- Processed Section -->
+
+                    </LinearLayout>
+                    <!-- List Section -->
+
+                    <TextView
+                        android:id="@+id/tvNoDataFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/x5"
+                        android:fontFamily="@font/lato_black"
+                        android:gravity="center"
+                        android:text="@string/no_data_found"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="@dimen/s12" />
+
+                </FrameLayout>
+                <!-- Section -->
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </FrameLayout>
+    <!-- Main Section -->
+
+
+</LinearLayout>

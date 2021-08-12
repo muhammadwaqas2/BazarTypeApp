@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    android:clickable="true"
+    android:id="@+id/llMainView">
+
+
+    <!-- Tabs Option Section -->
+    <LinearLayout
+        android:id="@+id/llTabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x52"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/x10"
+        style="?attr/primaryButtonTheme"
+        android:visibility="visible"
+        android:background="?attr/colorPrimary">
+
+
+        <!-- Received Tab -->
+        <TextView
+            android:id="@+id/tvReceived"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="?attr/buttonTextColor"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:textSize="@dimen/s12"
+            android:text="@string/received"
+            android:background="?attr/colorPrimaryDark"/>
+
+
+
+        <!-- Sent Tab -->
+        <TextView
+            android:id="@+id/tvSent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:textColor="?attr/buttonTextColor"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:textSize="@dimen/s12"
+            android:text="@string/sent"/>
+
+
+
+
+    </LinearLayout>
+    <!-- Tabs Option Section -->
+
+    <!-- Main Section -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+
+        <!--Received Section -->
+        <LinearLayout
+            android:id="@+id/llReceivedSectionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <!-- Received List Section -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/flReceivedListSectionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Received Listing  -->
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/swipeRefreshReceived"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvReceived"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/x10"/>
+
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                </FrameLayout>
+
+                <!-- No data Found  Section -->
+                <LinearLayout
+                    android:id="@+id/llNoReceivedDataFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/x5"
+                    android:layout_marginEnd="@dimen/x5"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/x5"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/primaryTextColor"
+                        android:fontFamily="@font/lato_black"
+                        android:textSize="@dimen/s12"
+                        android:text="@string/no_invitations_found"
+                        android:layout_marginEnd="@dimen/x5"/>
+
+                </LinearLayout>
+                <!-- No data Found Section -->
+
+            </FrameLayout>
+
+            <!-- Received  List Section  -->
+
+        </LinearLayout>
+        <!--Received Section -->
+
+
+
+        <!--Sent Section -->
+        <LinearLayout
+            android:id="@+id/llSentSectionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Supplier List Section -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/flSentListSectionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <!-- Supplier Listing  -->
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/swipeRefreshSent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvSent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/x10"/>
+
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <!-- Supplier Listing -->
+
+                </FrameLayout>
+
+                <!-- No data Found  Section -->
+                <LinearLayout
+                    android:id="@+id/llNoSentDataFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/x5"
+                    android:layout_marginEnd="@dimen/x5"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/x5"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/primaryTextColor"
+                        android:fontFamily="@font/lato_black"
+                        android:textSize="@dimen/s12"
+                        android:text="@string/no_invitations_found"
+                        android:layout_marginEnd="@dimen/x5"/>
+
+                </LinearLayout>
+                <!-- No data Found Section -->
+
+            </FrameLayout>
+            <!-- Supplier  List Section  -->
+
+        </LinearLayout>
+        <!--Sent Section -->
+
+
+    </FrameLayout>
+    <!-- Main Section -->
+
+</LinearLayout>

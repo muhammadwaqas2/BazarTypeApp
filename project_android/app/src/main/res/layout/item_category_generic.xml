@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMainView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/x15"
+    android:layout_marginStart="@dimen/x15"
+    android:layout_marginEnd="@dimen/x15"
+    android:layout_marginTop="@dimen/x7"
+    android:layout_marginBottom="@dimen/x7"
+    android:gravity="center"
+    android:background="@drawable/dialog_round_bg"
+    android:elevation="@dimen/x3">
+
+
+
+  <LinearLayout
+      android:layout_width="0dp"
+      android:layout_weight="1"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginEnd="@dimen/x15">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/primaryTextColor"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="@dimen/s14"
+        android:ellipsize="end"/>
+
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/secondaryTextColor"
+        android:fontFamily="@font/lato_bold"
+        android:layout_marginTop="@dimen/x5"
+        android:textSize="@dimen/s12"
+        android:visibility="gone"/>
+
+  </LinearLayout>
+
+  <ImageView
+      android:id="@+id/ivCheckbox"
+      android:layout_width="@dimen/x25"
+      android:layout_height="@dimen/x25"
+      android:layout_gravity="center"
+      android:src="@drawable/check_sign"/>
+
+</LinearLayout>

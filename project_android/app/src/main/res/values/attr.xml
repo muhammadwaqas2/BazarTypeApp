@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="primaryTextColor" format="color"/>
+    <attr name="secondaryTextColor" format="color"/>
+    <attr name="buttonNormalColor" format="color"/>
+    <attr name="buttonHighlightColor" format="color" />
+    <attr name="buttonTextColor" format="color" />
+    <attr name="primaryButtonTheme" format="reference" />
+    <attr name="secondaryButtonTheme" format="reference" />
+    <attr name="primaryDarkButtonTheme" format="reference" />
+    <attr name="colorScreenBg" format="color" />
+    <attr name="primaryEdiTextTheme" format="reference" />
+    <attr name="lightGrayButtonTheme" format="reference" />
+
+
+
+
+</resources>

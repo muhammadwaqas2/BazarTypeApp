@@ -1,0 +1,271 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android' //for Realm
+apply plugin: 'com.google.gms.google-services'// For Google Push Notification
+
+android {
+    signingConfigs {
+        staging {
+            storeFile file('E:\\Android Development\\Git Code\\bizlinked-android\\project_android\\profiles\\staging\\bizlinked-keystore.jks')
+            storePassword 'Bizlinked111*'
+            keyAlias 'bizlinked'
+            keyPassword 'Bizlinked111*'
+        }
+    }
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.app.bizlinked"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        signingConfig signingConfigs.staging
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    buildTypes {
+
+        debug {
+            debuggable true
+//            applicationIdSuffix ".debug"
+
+            buildConfigField "long", "DATABASE_VERSION", DATABASE_VERSION
+            buildConfigField "String", "DATABASE_NAME", DATABASE_NAME
+            buildConfigField "String", "APP_URL", DEBUG_API_URL
+            buildConfigField "String", "AUTH_URL", AUTH_DEBUG_URL
+            buildConfigField "String", "BASIC_TOKEN", BASIC_TOKEN
+            buildConfigField "String", "CLIENT_ID", CLIENT_ID
+            buildConfigField "String", "GRANT_TYPE", GRANT_TYPE
+            buildConfigField "String", "ADMIN_USERNAME", ADMIN_USERNAME
+            buildConfigField "String", "ADMIN_PASSWORD", ADMIN_PASSWORD
+            buildConfigField "String", "ENVIRONMENT", DEBUG_ENV
+        }
+
+
+        staging {
+            debuggable true
+
+            //applicationIdSuffix ".staging"
+
+            buildConfigField "long", "DATABASE_VERSION", DATABASE_VERSION
+            buildConfigField "String", "DATABASE_NAME", DATABASE_NAME
+            buildConfigField "String", "APP_URL", STAGING_API_URL
+            buildConfigField "String", "AUTH_URL", AUTH_STAGING_URL
+            buildConfigField "String", "BASIC_TOKEN", BASIC_TOKEN
+            buildConfigField "String", "CLIENT_ID", CLIENT_ID
+            buildConfigField "String", "GRANT_TYPE", GRANT_TYPE
+            buildConfigField "String", "ADMIN_USERNAME", ADMIN_USERNAME
+            buildConfigField "String", "ADMIN_PASSWORD", ADMIN_PASSWORD
+            buildConfigField "String", "ENVIRONMENT", STAGING_ENV
+//            signingConfig signingConfigs.staging
+            //debuggable = true
+        }
+
+        release {
+
+            buildConfigField "long", "DATABASE_VERSION", DATABASE_VERSION
+            buildConfigField "String", "DATABASE_NAME", DATABASE_NAME
+            buildConfigField "String", "APP_URL", API_URL
+            buildConfigField "String", "AUTH_URL", AUTH_PRODUCTION_URL
+            buildConfigField "String", "BASIC_TOKEN", BASIC_TOKEN
+            buildConfigField "String", "CLIENT_ID", CLIENT_ID
+            buildConfigField "String", "GRANT_TYPE", GRANT_TYPE
+            buildConfigField "String", "ADMIN_USERNAME", ADMIN_USERNAME
+            buildConfigField "String", "ADMIN_PASSWORD", ADMIN_PASSWORD
+            buildConfigField "String", "ENVIRONMENT", PRODUCTION_ENV
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //App Compat Support V7
+    implementation supportDependencies.appCompat
+
+    //App Compat Support V4
+    implementation supportDependencies.supportV4
+
+    //Junit
+    testImplementation "junit:junit:$junitVersion"
+
+    //Test Runner
+    androidTestImplementation "com.android.support.test:runner:$runnerVersion"
+
+    //Espresso
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
+
+    //For Card View
+//    implementation supportDependencies.cardView
+    implementation supportDependencies.design
+
+    //For RecyclerView
+    implementation supportDependencies.recyclerView
+//    implementation "androidx.recyclerview:recyclerview:1.1.0"
+
+    //Android Animation Liberary
+    implementation animationLibDependencies.easingAnimationLiberary
+    implementation animationLibDependencies.androidAnimationLiberary
+
+    //Butterknife
+    implementation "com.jakewharton:butterknife:$butterKnifeLibVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeLibVersion"
+
+    //Saripar
+    implementation "com.mobsandgeeks:android-saripaar:$saripaarValidationLibVersion"
+
+    //For Custom Progress Bar
+    implementation "com.github.ybq:Android-SpinKit:$progressBarLibVersion"
+
+    //Toasty
+    implementation "com.github.GrenderG:Toasty:$toastyLibVersion"
+
+    //Permission Liberary
+    implementation "gun0912.ted:tedpermission:$permissionTEDLibVersion"
+
+    //For Image File Select
+    implementation "com.droidninja:filepicker:$filePickerLibVersion"
+    implementation "com.github.bumptech.glide:glide:$glideLibVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideLibVersion"
+
+    //For Image Compression
+    implementation "id.zelory:compressor:$imageCompressionLibVersion"
+
+//    //Retrofit 3.8.1  4.9.1
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    //Video Compression
+    implementation 'com.yovenny.VideoCompress:videocompress:1.0.0'
+
+    //Circle Image
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //Round Image
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    // Firebase Core
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+
+    // Firebase Auth
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
+
+    // Firebase RealTime Databse
+//    implementation 'com.google.firebase:firebase-database:16.0.5'
+//
+    //Firebase Messaging (Push) Liberary
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+//    //Firebase Storage Liberary
+//    implementation 'com.google.firebase:firebase-storage:16.0.5'
+
+    //Progress Bar Library
+//    implementation 'mobi.gspd:segmentedbarview:1.1.6@aar'
+
+//    // For Loader
+//    implementation 'com.victor:lib:1.0.4'
+
+
+    //Google play services for Location
+//    implementation "com.google.android.gms:play-services-location:$playServicesLibVersion"
+
+//    //For Places
+//    implementation "com.google.android.gms:play-services-places:$playServicesLibVersion"
+
+    //For Google Map
+    implementation "com.google.android.gms:play-services-maps:$playServicesMapLibVersion"
+//    implementation 'com.google.maps.android:android-maps-utils:2.0.3'
+
+    //For Google Authentication (Payment)
+    //implementation "com.gcom.android.support:design:28.0.0oogle.android.gms:play-services-auth:$playServicesLibVersion"
+
+    //For Route Direction
+//    implementation 'com.akexorcist:googledirectionlibrary:1.1.1'
+
+
+    //For Socket
+//    implementation 'com.github.nkzawa:socket.io-client:0.3.0'
+
+    // For Crashlytics
+//    implementation('com.crashlytics.sdk.android:crashlytics:2.9.8@aar') {
+//        transitive = true
+//    }
+
+    //For Country Picker
+//    implementation 'com.github.mukeshsolanki:country-picker-android:2.0.0' // because of Support Liberary using 2.0.0
+
+
+    //For Section Recycler View
+//    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0' // Because of Support Liberary using 1.2.0
+
+    //Bottom Sheet
+    implementation 'com.github.rubensousa:bottomsheetbuilder:1.6.1'
+
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+//    implementation 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
+
+
+    //For Pin View
+    implementation 'com.poovam:pin-edittext-field:1.2.1' // because of Support Liberary using 1.2.1
+
+    //Resend Timer View
+    implementation 'com.github.krtkush:LinearTimer:v2.1.1'
+
+//    //Expandible Card View For weekends
+//    implementation 'com.alespero:expandable-cardview:0.8'
+
+
+    // Add the SDK for Firebase Cloud Messaging
+//    implementation 'com.google.firebase:firebase-messaging:20.2.3'
+
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:$archLifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$archLifecycleVersion"
+
+
+    //Realm Adapter
+    implementation 'io.realm:android-adapters:3.1.0'
+
+
+    //Page indicator
+    implementation 'com.romandanylyk:pageindicatorview:1.0.2'
+
+
+    //For Pagination
+    implementation 'com.github.markomilos:paginate:0.5.1'
+
+    //For Photo Editor
+    implementation 'com.github.krokyze:ucropnedit:2.2.3'
+
+    //Sentry For Crashlytics
+    implementation 'io.sentry:sentry-android:3.1.0'
+
+}
+
+

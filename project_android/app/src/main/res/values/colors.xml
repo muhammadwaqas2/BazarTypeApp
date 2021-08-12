@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Color -->
+    <color name="appRedColor">#DB2032</color>
+    <color name="appDarkGreyColor">#555555</color>
+    <color name="appLightGreyColor">#D4D4D4</color>
+    <color name="appLightGreyColor2">#A7A7A7</color>
+    <color name="appDarkGreyTextColor">#242424</color>
+    <color name="mapPolyLineColor">#D3D5D2</color>
+    <!-- App Color -->
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="yellow_color">#FFD262</color>
+    <color name="appColor">#004B90</color>
+    <color name="grayColor">#5d5d5d</color>
+    <color name="transparent">#00000000</color>
+    <color name="seperator_color">#e4e4e4</color>
+    <color name="seperator2_color">#dadada</color>
+    <color name="black">#000000</color>
+    <color name="dialog_message_color">#8E8D8C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparency">#80FFFFFF</color>
+    <color name="welcome_text_color">#818181</color>
+    <color name="select_language_text_colour">#626262</color>
+    <color name="twitter_color">#009FEF</color>
+    <color name="insta_color">#533C36</color>
+    <color name="blue_color2">#1552ca</color>
+    <color name="blue_color">#375795</color>
+    <color name="fb_color">#375795</color>
+    <color name="login_text_colour">#C7C7C7</color>
+    <color name="pin_line_color">#6EB8BD</color>
+    <color name="gray_title">#4D5557</color>
+    <color name="tab_color">#EAEAEA</color>
+    <color name="home_options_bg">#F7F7F7</color>
+    <color name="anonymous_bg_color">#616161</color>
+    <color name="no_data_text_color">#A4A4A4</color>
+    <color name="terms_and_condition_text_color">#A7A7A7</color>
+    <color name="home_option_txt_color">#B4B4B4</color>
+    <color name="home_option_text_color">#9D9D9D</color>
+    <color name="rounded_corner_color">#C3C3C3</color>
+    <color name="ads_text_color">#BEBEBE</color>
+    <color name="item_name_color">#2C2C2C</color>
+    <color name="distance_color">#9F9F9F</color>
+    <color name="badge_text_color">#8A8A8A</color>
+    <color name="desc_text_bg_color">#E4E4E4</color>
+    <color name="gray_dialog_color">#f3f3f3</color>
+    <color name="error_color">#ff0000</color>
+    <color name="contact_message_color">#D8D8D8</color>
+    <color name="locationTextColor">#4D4D4D</color>
+    <color name="categoryColor">#B2B2B2</color>
+    <color name="distanceTextColor">#B5B5B5</color>
+    <color name="green">#4DC236</color>
+    <color name="orange">#F3A217</color>
+    <color name="red">#FF0018</color>
+    <color name="blue_chat_time_color">#77D4F2</color>
+    <color name="gray_chat_time_color">#9FA0A0</color>
+    <color name="gray_chat_color">#E1E6EA</color>
+    <color name="hashtagColor">#3AC6F0</color>
+    <color name="tvProductAttributeColor">#3B3B3B</color>
+    <color name="tvProductAttributeValueColor">#5B5B5B</color>
+    <color name="productBidHintColor">#E3E3E3</color>
+    <color name="tvProductCommentTextColor">#8C8C8C</color>
+    <color name="tvBidderNameColor">#787878</color>
+    <color name="add_post_label_color">#939393</color>
+    <color name="light_grey">#ECEFF4</color>
+    <color name="black_light">#3A3A3A</color>
+    <color name="location_text_color">#626262</color>
+    <color name="attribute_color">#5C5C5C</color>
+    <color name="attributes_hint_color">#C8C8C8</color>
+    <color name="button_secondary_color">#C6C6C6</color>
+    <color name="bar_unselected_color">#E5E5E5</color>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- App Theme Color-->
+    <color name="appThemeColor">#23B2C0</color>
+    <color name="appPrimaryColor">#272C32</color>
+
+
+    <!-- App Component Colors -->
+    <color name="footer_text_color">#B9BCBE</color>
+    <color name="black_transparent">#44000000</color>
+    <color name="edittextview_normal_theme_text_color">#57585A</color>
+    <color name="titlebar_normal_bg_color">#3D61AF</color>
+    <color name="home_normal_bottom_tab_text_color">#5E6778</color>
+    <color name="home_normal_circle_unselect_color">#ABACB0</color>
+    <color name="home_normal_circle_select_color">#23B2C0</color>
+    <color name="home_normal_circle_text_color">#2D5150</color>
+    <color name="home_normal_tab_bottom_bg_color">#E5E5E7</color>
+    <color name="customer_support_center_number_text_color">#5D636F</color>
+    <color name="customer_support_center_seperater_color">#CDCED2</color>
+    <color name="support_center_info_bg">#F2F2F2</color>
+    <color name="home_main_container_bg_color">#EAEAEA</color>
+    <color name="document_download_text_color">#2E2E2E</color>
+    <color name="document_download_file_mb_text_color">#8A8A8A</color>
+    <color name="tracking_search_button_color">#008E9D</color>
+    <color name="capture_document_image_bg">#DEDEDE</color>
+    <color name="capture_document_image_bg_border">#CACAC9</color>
+    <color name="remeber_cb_color">#7e96b8</color>
+    <color name="pin_color">#C7C7C7</color>
+    <color name="confirmation_text_color">#2D2D2D</color>
+    <color name="dark_gray">#4E4E4E</color>
+    <color name="green_theme">#04F904</color>
+    <color name="fb_text_color">#475993</color>
+    <color name="gmail_text_color">#EB4335</color>
+    <color name="gray_color">#E2E2E2</color>
+    <color name="signup_fields_color">#646464</color>
+    <color name="orange_dark">#FF3742</color>
+    <color name="light_gray">#f7f7f7</color>
+    <color name="dark_blue_color">#0C00FF</color>
+    <color name="menu_bottom_option_color">#38332B</color>
+    <color name="setting_page_heading_color">#7E7E7E</color>
+    <color name="setting_page_body_color">#5C5C5C</color>
+    <color name="settiong_bg">#E2E2E2</color>
+    <color name="red_border_color">#f32415</color>
+    <color name="green_border_color">#59e423</color>
+    <color name="blue_border_color">#02bcf2</color>
+    <color name="dark_grey">#4B4B4B</color>
+    <color name="light_purple">#D150F6</color>
+    <color name="light_pink">#F65073</color>
+    <color name="yellow">#f3ce17</color>
+    <color name="appBGScreenColor">#FFFFFF</color>
+    <color name="light_grey_color">#6C757D</color>
+
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BizLinked App Colors ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <color name="appColorPrimary">#00ddc4</color>
+    <color name="appColorPrimaryDark">#24C5B2</color>
+    <color name="appColorAccent">#00ddc4</color>
+    <color name="appPrimaryTextColor">#444444</color>
+    <color name="appSecondaryTextColor">#666666</color>
+    <color name="appButtonNormalColor">@color/appColorPrimary</color>
+    <color name="appButtonHighlightColor">@color/appColorPrimaryDark</color>
+    <color name="appButtonTextColor">#FFFFFF</color>
+    <color name="appScreenBgColor">#FFFFFF</color>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BizLinked App Colors ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+</resources>

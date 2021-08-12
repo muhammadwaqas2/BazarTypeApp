@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="@dimen/x8"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <com.app.bizlinked.customViews.TitleBar
+            android:id="@+id/mTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <!-- Bottom Menu -->
+        <LinearLayout
+            android:id="@+id/llBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="?attr/colorPrimary"
+            android:visibility="gone">
+
+
+            <!-- Links -->
+            <LinearLayout
+                android:id="@+id/llLinks"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5">
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_links"
+                    android:layout_marginBottom="@dimen/x5"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/x5"
+                    android:textColor="?attr/buttonTextColor"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/s9"
+                    android:text="@string/links"/>
+
+            </LinearLayout>
+            <!-- Links -->
+
+
+            <!-- Products -->
+            <LinearLayout
+                android:id="@+id/llProducts"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5">
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_products"
+                    android:layout_marginBottom="@dimen/x5"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/x5"
+                    android:textColor="?attr/buttonTextColor"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/s9"
+                    android:text="@string/products"/>
+
+            </LinearLayout>
+            <!-- Products -->
+
+            <!-- Orders -->
+            <LinearLayout
+                android:id="@+id/llOrders"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5">
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_orders"
+                    android:layout_marginBottom="@dimen/x5"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/x5"
+                    android:textColor="?attr/buttonTextColor"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/s9"
+                    android:text="@string/orders"/>
+
+            </LinearLayout>
+            <!-- Orders -->
+
+            <!-- Wallet -->
+            <LinearLayout
+                android:id="@+id/llWallet"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5">
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_wallet"
+                    android:layout_marginBottom="@dimen/x5"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/x5"
+                    android:textColor="?attr/buttonTextColor"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/s9"
+                    android:text="@string/wallet"/>
+
+            </LinearLayout>
+            <!-- Wallet -->
+
+
+            <!-- Settings -->
+            <LinearLayout
+                android:id="@+id/llSettings"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="@dimen/x5"
+                android:paddingBottom="@dimen/x5">
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_settings"
+                    android:layout_marginBottom="@dimen/x5"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/x5"
+                    android:textColor="?attr/buttonTextColor"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="@dimen/s9"
+                    android:text="@string/settings"/>
+
+            </LinearLayout>
+            <!-- Settings -->
+
+
+        </LinearLayout>
+        <!-- Bottom Menu -->
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progressBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="invisible">
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:padding="@dimen/x15">-->
+
+<!--            <com.github.ybq.android.spinkit.SpinKitView-->
+<!--                android:id="@+id/progressBar"-->
+<!--                style="@style/SpinKitView.CubeGrid"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                app:SpinKit_Color="?attr/colorPrimary"/>-->
+
+<!--        </LinearLayout>-->
+
+        <ProgressBar
+            android:id="@+id/pb_assist"
+            android:layout_width="@dimen/x70"
+            android:layout_height="@dimen/x70"
+            android:layout_gravity="center"
+            android:indeterminateTint="?attr/colorPrimary"
+            android:alpha="1"
+            android:background="@drawable/white_circle"
+            android:maxWidth="@dimen/x50"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:src="@mipmap/ic_bizlinked_launcher_icon"
+            android:background="@drawable/white_circle"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+
+
+</FrameLayout>

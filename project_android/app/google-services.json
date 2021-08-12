@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "255436698482",
+    "firebase_url": "https://bizlinked-66373.firebaseio.com",
+    "project_id": "bizlinked-66373",
+    "storage_bucket": "bizlinked-66373.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255436698482:android:f2e67ab7af9021f16fa3eb",
+        "android_client_info": {
+          "package_name": "com.app.bizlinked"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255436698482-iqepff3pdevkimp8soqh6epgcoge2kae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTDFNjmuwI28u3a8IqfpggMEoFwUfRlrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255436698482-iqepff3pdevkimp8soqh6epgcoge2kae.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "255436698482-aq6a03pfknv40910k7761rkcbu7vnr52.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lumaque.Bizlinked"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

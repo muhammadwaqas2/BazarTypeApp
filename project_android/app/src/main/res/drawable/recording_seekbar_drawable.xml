@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@android:id/background"
+        android:drawable="@color/capture_document_image_bg"/>
+
+    <item android:id="@android:id/secondaryProgress">
+        <scale
+            android:drawable="@color/appThemeColor"
+            android:scaleWidth="100%" />
+    </item>
+
+    <item android:id="@android:id/progress">
+        <scale
+            android:drawable="@color/appThemeColor"
+            android:scaleWidth="100%" />
+    </item>
+
+</layer-list>

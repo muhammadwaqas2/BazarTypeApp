@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorScreenBg"
+    android:gravity="center"
+    android:clickable="true"
+    android:id="@+id/llMainView">
+
+
+    <!-- Category Section List-->
+    <FrameLayout
+        android:id="@+id/flCategoryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <!-- No data Found  Section -->
+        <LinearLayout
+            android:id="@+id/llNoCategoryDataFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/x5"
+            android:layout_marginEnd="@dimen/x5"
+            android:layout_gravity="center"
+            android:padding="@dimen/x5"
+            android:translationZ="@dimen/x10"
+            android:visibility="gone">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/lato_black"
+                android:textSize="@dimen/s12"
+                android:text="@string/no_category_found"
+                android:layout_marginEnd="@dimen/x5"/>
+
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="?attr/colorPrimary"-->
+            <!--android:fontFamily="@font/lato_black"-->
+            <!--android:textSize="@dimen/s12"-->
+            <!--android:text="@string/add_contacts"-->
+            <!--android:textColorHint="@color/white"-->
+            <!--android:visibility="gone"/>-->
+
+        </LinearLayout>
+        <!-- No data Found Section -->
+
+        <!-- Item Listing  -->
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/swipeRefreshCategory"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x10"/>
+
+        <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+    </FrameLayout>
+</LinearLayout>
+
+
